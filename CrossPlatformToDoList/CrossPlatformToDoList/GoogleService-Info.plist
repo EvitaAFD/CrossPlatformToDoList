@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>807327091510-rivnqurfdd4uhm15mavh23gdof9sm06t.apps.googleusercontent.com</string>
+	<string>678456406853-v6gu05ie08t18vscsmtr1184b2b3vk7l.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.807327091510-rivnqurfdd4uhm15mavh23gdof9sm06t</string>
+	<string>com.googleusercontent.apps.678456406853-v6gu05ie08t18vscsmtr1184b2b3vk7l</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBOF9112LUiMKIabGbNqPgR_DeVFsMjHaU</string>
+	<string>AIzaSyCesBRDh-9iaOG2g01aWtmcorZuyD6bhp8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>807327091510</string>
+	<string>678456406853</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.evedenison.CrossPlatformToDoList</string>
 	<key>PROJECT_ID</key>
-	<string>crossplatformtodolist-c2b3b</string>
+	<string>crossplatformtodolist-821fe</string>
 	<key>STORAGE_BUCKET</key>
-	<string>crossplatformtodolist-c2b3b.appspot.com</string>
+	<string>crossplatformtodolist-821fe.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:807327091510:ios:62f9474d680f4a90</string>
+	<string>1:678456406853:ios:62f9474d680f4a90</string>
 	<key>DATABASE_URL</key>
-	<string>https://crossplatformtodolist-c2b3b.firebaseio.com</string>
+	<string>https://crossplatformtodolist-821fe.firebaseio.com</string>
 </dict>
 </plist>

@@ -59,7 +59,6 @@
         
         if (user) {
             NSLog(@"User Signed Up %@", user);
-            [self dismissViewControllerAnimated:YES completion:nil];
         }
         
     }];

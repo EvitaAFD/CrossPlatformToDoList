@@ -8,6 +8,6 @@
 
 #import "ViewController.h"
 
-@interface LoginViewController : ViewController
+@interface LoginViewController : UIViewController
 
 @end

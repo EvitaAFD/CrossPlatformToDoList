@@ -14,7 +14,7 @@
         <!--TO DO LIST-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="TO DO LIST" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" title="TO DO LIST" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -40,7 +40,9 @@
                             <constraint firstItem="awc-6y-cgy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vBK-VW-et8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TO DO LIST" id="z3v-83-RNv"/>
+                    <navigationItem key="navigationItem" title="TO DO LIST" id="z3v-83-RNv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZIU-db-fn1"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,18 +71,12 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="emailTextField:" destination="BPP-X7-lx1" eventType="editingDidEnd" id="Yh5-6i-4Vp"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eab-2h-kS0">
                                 <rect key="frame" x="49" y="261" width="277" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="passwordTextField:" destination="BPP-X7-lx1" eventType="editingDidEnd" id="6ho-MJ-I0T"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaR-aZ-2XM">
                                 <rect key="frame" x="49" y="321" width="138.5" height="30"/>
@@ -125,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b28-LS-x2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48.799999999999997" y="788.45577211394311"/>
+            <point key="canvasLocation" x="-378" y="733"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="llc-zP-cjf">
@@ -138,7 +134,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eJu-Kr-P4S"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vyE-W4-R4x"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fd0-7w-Rw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,6 +145,10 @@
         <scene sceneID="pFG-gN-nem">
             <objects>
                 <viewController id="TLY-Qc-Kjn" customClass="NewToDoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qC4-XM-xrZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="L2M-I1-gKb"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gXu-PN-c9Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -13,9 +13,13 @@
 		50DEE1F31EC0DF0F0083AA8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50DEE1F11EC0DF0F0083AA8F /* Main.storyboard */; };
 		50DEE1F51EC0DF0F0083AA8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50DEE1F41EC0DF0F0083AA8F /* Assets.xcassets */; };
 		50DEE1F81EC0DF0F0083AA8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50DEE1F61EC0DF0F0083AA8F /* LaunchScreen.storyboard */; };
+		50DEE2001EC0E0ED0083AA8F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50DEE1FF1EC0E0ED0083AA8F /* GoogleService-Info.plist */; };
+		EC14917634C25D1246802CB3 /* libPods-CrossPlatformToDoList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29F8A7C6D0F4339738A4CF /* libPods-CrossPlatformToDoList.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B29F8A7C6D0F4339738A4CF /* libPods-CrossPlatformToDoList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossPlatformToDoList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EE32505421879551D8312E9 /* Pods-CrossPlatformToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformToDoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 		50DEE1E51EC0DF0F0083AA8F /* CrossPlatformToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossPlatformToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50DEE1E91EC0DF0F0083AA8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50DEE1EB1EC0DF0F0083AA8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		50DEE1F41EC0DF0F0083AA8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50DEE1F71EC0DF0F0083AA8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50DEE1F91EC0DF0F0083AA8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50DEE1FF1EC0E0ED0083AA8F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9EDC1564EFD9F37F55FCCD8D /* Pods-CrossPlatformToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformToDoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC14917634C25D1246802CB3 /* libPods-CrossPlatformToDoList.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				50DEE1E71EC0DF0F0083AA8F /* CrossPlatformToDoList */,
 				50DEE1E61EC0DF0F0083AA8F /* Products */,
+				F2DE4D95BDEF54A9DA59E890 /* Pods */,
+				D1A620EAE2B01BCB6FB4A234 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +75,7 @@
 				50DEE1F41EC0DF0F0083AA8F /* Assets.xcassets */,
 				50DEE1F61EC0DF0F0083AA8F /* LaunchScreen.storyboard */,
 				50DEE1F91EC0DF0F0083AA8F /* Info.plist */,
+				50DEE1FF1EC0E0ED0083AA8F /* GoogleService-Info.plist */,
 				50DEE1E81EC0DF0F0083AA8F /* Supporting Files */,
 			);
 			path = CrossPlatformToDoList;
@@ -79,6 +89,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D1A620EAE2B01BCB6FB4A234 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B29F8A7C6D0F4339738A4CF /* libPods-CrossPlatformToDoList.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2DE4D95BDEF54A9DA59E890 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EE32505421879551D8312E9 /* Pods-CrossPlatformToDoList.debug.xcconfig */,
+				9EDC1564EFD9F37F55FCCD8D /* Pods-CrossPlatformToDoList.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50DEE1FC1EC0DF0F0083AA8F /* Build configuration list for PBXNativeTarget "CrossPlatformToDoList" */;
 			buildPhases = (
+				F45E18DE530FA921BB41C4D2 /* [CP] Check Pods Manifest.lock */,
 				50DEE1E11EC0DF0F0083AA8F /* Sources */,
 				50DEE1E21EC0DF0F0083AA8F /* Frameworks */,
 				50DEE1E31EC0DF0F0083AA8F /* Resources */,
+				F330DECB1AA31D7EF171918D /* [CP] Embed Pods Frameworks */,
+				8EE73EB44791A594E677B72C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,12 +169,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				50DEE1F81EC0DF0F0083AA8F /* LaunchScreen.storyboard in Resources */,
+				50DEE2001EC0E0ED0083AA8F /* GoogleService-Info.plist in Resources */,
 				50DEE1F51EC0DF0F0083AA8F /* Assets.xcassets in Resources */,
 				50DEE1F31EC0DF0F0083AA8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8EE73EB44791A594E677B72C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F330DECB1AA31D7EF171918D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F45E18DE530FA921BB41C4D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50DEE1E11EC0DF0F0083AA8F /* Sources */ = {
@@ -273,6 +352,7 @@
 		};
 		50DEE1FD1EC0DF0F0083AA8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EE32505421879551D8312E9 /* Pods-CrossPlatformToDoList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UG659HW99G;
@@ -285,6 +365,7 @@
 		};
 		50DEE1FE1EC0DF0F0083AA8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EDC1564EFD9F37F55FCCD8D /* Pods-CrossPlatformToDoList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UG659HW99G;

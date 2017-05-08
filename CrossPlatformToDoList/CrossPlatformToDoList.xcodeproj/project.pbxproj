@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50B785CE1EC0EBBF00994FCA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B785CD1EC0EBBF00994FCA /* LoginViewController.m */; };
+		50B785D41EC10E5D00994FCA /* NewToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B785D31EC10E5D00994FCA /* NewToDoViewController.m */; };
 		50DEE1EA1EC0DF0F0083AA8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DEE1E91EC0DF0F0083AA8F /* main.m */; };
 		50DEE1ED1EC0DF0F0083AA8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DEE1EC1EC0DF0F0083AA8F /* AppDelegate.m */; };
 		50DEE1F01EC0DF0F0083AA8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DEE1EF1EC0DF0F0083AA8F /* ViewController.m */; };
@@ -23,6 +24,8 @@
 		4EE32505421879551D8312E9 /* Pods-CrossPlatformToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformToDoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 		50B785CC1EC0EBBF00994FCA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		50B785CD1EC0EBBF00994FCA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		50B785D21EC10E5D00994FCA /* NewToDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewToDoViewController.h; sourceTree = "<group>"; };
+		50B785D31EC10E5D00994FCA /* NewToDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewToDoViewController.m; sourceTree = "<group>"; };
 		50DEE1E51EC0DF0F0083AA8F /* CrossPlatformToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossPlatformToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50DEE1E91EC0DF0F0083AA8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50DEE1EB1EC0DF0F0083AA8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,6 +55,12 @@
 		50B785CF1EC0EBCF00994FCA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				50B785CC1EC0EBBF00994FCA /* LoginViewController.h */,
+				50B785CD1EC0EBBF00994FCA /* LoginViewController.m */,
+				50B785D21EC10E5D00994FCA /* NewToDoViewController.h */,
+				50B785D31EC10E5D00994FCA /* NewToDoViewController.m */,
+				50DEE1EE1EC0DF0F0083AA8F /* ViewController.h */,
+				50DEE1EF1EC0DF0F0083AA8F /* ViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -69,10 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				50DEE1F11EC0DF0F0083AA8F /* Main.storyboard */,
-				50DEE1EE1EC0DF0F0083AA8F /* ViewController.h */,
-				50DEE1EF1EC0DF0F0083AA8F /* ViewController.m */,
-				50B785CC1EC0EBBF00994FCA /* LoginViewController.h */,
-				50B785CD1EC0EBBF00994FCA /* LoginViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50B785CE1EC0EBBF00994FCA /* LoginViewController.m in Sources */,
+				50B785D41EC10E5D00994FCA /* NewToDoViewController.m in Sources */,
 				50DEE1F01EC0DF0F0083AA8F /* ViewController.m in Sources */,
 				50DEE1ED1EC0DF0F0083AA8F /* AppDelegate.m in Sources */,
 				50DEE1EA1EC0DF0F0083AA8F /* main.m in Sources */,

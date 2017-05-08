@@ -62,6 +62,7 @@
 
 }
 
+//Notify realtime changes to database
 -(void) startMonitoringToDoUpdates {
 
     self.allToDoHandler = [[self.userReference child:@"todos"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {

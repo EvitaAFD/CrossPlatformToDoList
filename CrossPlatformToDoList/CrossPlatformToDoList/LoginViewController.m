@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
 - (IBAction)emailTextField:(id)sender {
@@ -43,7 +43,7 @@
         
         if (user) {
             NSLog(@"Logged in User %@", user);
-            [self dismissViewControllerAnimated: YES completion:nil];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
         
     }];
@@ -59,7 +59,7 @@
         
         if (user) {
             NSLog(@"User Signed Up %@", user);
-            [self dismissViewControllerAnimated: YES completion:nil];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
         
     }];

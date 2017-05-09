@@ -138,7 +138,7 @@
     
     ToDo *toDo = [self.allToDos objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", toDo.title];
+    cell.textLabel.text = [NSString stringWithFormat:@"To Do Name: %@, To Do Details: %@", toDo.title, toDo.content];
     
     return cell;
     

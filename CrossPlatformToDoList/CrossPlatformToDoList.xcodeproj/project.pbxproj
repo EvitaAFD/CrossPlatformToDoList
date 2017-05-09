@@ -23,6 +23,8 @@
 		506102091EC246C400DB3F48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506102081EC246C400DB3F48 /* Assets.xcassets */; };
 		506102101EC248B500DB3F48 /* TVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5061020F1EC248B500DB3F48 /* TVHomeViewController.m */; };
 		506102111EC249D500DB3F48 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C9651C1EC14AE300DDB853 /* ToDo.m */; };
+		5061021A1EC2768900DB3F48 /* DetailToDoInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506102191EC2768900DB3F48 /* DetailToDoInterfaceController.m */; };
+		5061021B1EC2768900DB3F48 /* DetailToDoInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506102191EC2768900DB3F48 /* DetailToDoInterfaceController.m */; };
 		50B785CE1EC0EBBF00994FCA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B785CD1EC0EBBF00994FCA /* LoginViewController.m */; };
 		50B785D41EC10E5D00994FCA /* NewToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B785D31EC10E5D00994FCA /* NewToDoViewController.m */; };
 		50C9651D1EC14AE300DDB853 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C9651C1EC14AE300DDB853 /* ToDo.m */; };
@@ -103,6 +105,8 @@
 		5061020A1EC246C400DB3F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5061020E1EC248B500DB3F48 /* TVHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVHomeViewController.h; sourceTree = "<group>"; };
 		5061020F1EC248B500DB3F48 /* TVHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVHomeViewController.m; sourceTree = "<group>"; };
+		506102181EC2768900DB3F48 /* DetailToDoInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailToDoInterfaceController.h; path = "../WatchKit-ToDoList/DetailToDoInterfaceController.h"; sourceTree = "<group>"; };
+		506102191EC2768900DB3F48 /* DetailToDoInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailToDoInterfaceController.m; path = "../WatchKit-ToDoList/DetailToDoInterfaceController.m"; sourceTree = "<group>"; };
 		50B785CC1EC0EBBF00994FCA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		50B785CD1EC0EBBF00994FCA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		50B785D21EC10E5D00994FCA /* NewToDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewToDoViewController.h; sourceTree = "<group>"; };
@@ -161,14 +165,16 @@
 		506101DD1EC233AE00DB3F48 /* WatchKit-ToDoList Extension */ = {
 			isa = PBXGroup;
 			children = (
-				506101F21EC23F3D00DB3F48 /* ToDoRowController.h */,
-				506101F31EC23F3D00DB3F48 /* ToDoRowController.m */,
-				506101DE1EC233AE00DB3F48 /* InterfaceController.h */,
-				506101DF1EC233AE00DB3F48 /* InterfaceController.m */,
+				506101E41EC233AE00DB3F48 /* Assets.xcassets */,
+				506102181EC2768900DB3F48 /* DetailToDoInterfaceController.h */,
+				506102191EC2768900DB3F48 /* DetailToDoInterfaceController.m */,
 				506101E11EC233AE00DB3F48 /* ExtensionDelegate.h */,
 				506101E21EC233AE00DB3F48 /* ExtensionDelegate.m */,
-				506101E41EC233AE00DB3F48 /* Assets.xcassets */,
 				506101E61EC233AE00DB3F48 /* Info.plist */,
+				506101DE1EC233AE00DB3F48 /* InterfaceController.h */,
+				506101DF1EC233AE00DB3F48 /* InterfaceController.m */,
+				506101F21EC23F3D00DB3F48 /* ToDoRowController.h */,
+				506101F31EC23F3D00DB3F48 /* ToDoRowController.m */,
 			);
 			path = "WatchKit-ToDoList Extension";
 			sourceTree = "<group>";
@@ -514,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				506101F41EC23F3D00DB3F48 /* ToDoRowController.m in Sources */,
+				5061021B1EC2768900DB3F48 /* DetailToDoInterfaceController.m in Sources */,
 				506101E31EC233AE00DB3F48 /* ExtensionDelegate.m in Sources */,
 				506101E01EC233AE00DB3F48 /* InterfaceController.m in Sources */,
 				506101F51EC2427A00DB3F48 /* ToDo.m in Sources */,
@@ -535,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5061021A1EC2768900DB3F48 /* DetailToDoInterfaceController.m in Sources */,
 				50B785CE1EC0EBBF00994FCA /* LoginViewController.m in Sources */,
 				50B785D41EC10E5D00994FCA /* NewToDoViewController.m in Sources */,
 				50DEE1F01EC0DF0F0083AA8F /* ViewController.m in Sources */,

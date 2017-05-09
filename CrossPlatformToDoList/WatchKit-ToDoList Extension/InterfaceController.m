@@ -9,6 +9,7 @@
 #import "InterfaceController.h"
 #import "ToDo.h"
 #import "ToDoRowController.h"
+#import "DetailToDoInterfaceController.h"
 
 
 @interface InterfaceController ()
@@ -75,6 +76,7 @@
 
     
 }
+
 - (IBAction)newToDoPressed {
     
     NSArray *suggestions = @[@"Drink More Water", @"Pet Lola", @"Exercise"];

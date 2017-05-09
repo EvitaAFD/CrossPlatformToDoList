@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TV-ToDoList.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>WatchKit-ToDoList.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>506101CC1EC233AD00DB3F48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>506101F91EC246C400DB3F48</key>
 		<dict>
 			<key>primary</key>
 			<true/>

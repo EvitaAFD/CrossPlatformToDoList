@@ -66,6 +66,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addToDoTop" destination="ixi-1W-1Ex" id="hOg-Ma-onl"/>
+                        <outlet property="tableView" destination="hBb-0l-MCa" id="SFw-Sh-bbh"/>
                         <outlet property="toDoContainerView" destination="awc-6y-cgy" id="jWr-RC-s6d"/>
                     </connections>
                 </viewController>

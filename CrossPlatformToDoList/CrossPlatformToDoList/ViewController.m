@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 #import "LoginViewController.h"
+#import "ToDo.h"
 
 @import FirebaseAuth;
 @import Firebase;
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property(strong, nonatomic)NSMutableArray *allToDos;
 
 @property(strong, nonatomic) FIRDatabaseReference *userReference;
 @property(strong, nonatomic) FIRUser *currentUser;
@@ -20,6 +23,7 @@
 @property (nonatomic) FIRDatabaseHandle allToDoHandler;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *addToDoTop;
 @property (weak, nonatomic) IBOutlet UIView *toDoContainerView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -28,12 +32,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     [self checkUserStatus];
+    [self.tableView reloadData];
 }
 
 -(void)checkUserStatus {
@@ -69,19 +77,20 @@
 
     self.allToDoHandler = [[self.userReference child:@"todos"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         
-        NSMutableArray *allTodos = [[NSMutableArray alloc] init];
+        self.allToDos = [[NSMutableArray alloc] init];
         
         for (FIRDataSnapshot *child in snapshot.children) {
+            
+            ToDo *toDo = [[ToDo alloc] init];
         
             NSDictionary *todoData = child.value;
             
-            NSString *todoTitle = todoData[@"title"];
-            NSString *todoContent = todoData[@"content"];
+            toDo.title = todoData[@"title"];
+            toDo.content = todoData[@"content"];
             
-            
-            //for lab append new Todo to allTodos array
-            
-            NSLog(@"Todo Title: %@ - Conent: %@ ", todoTitle, todoContent);
+            [self.allToDos addObject:toDo];
+            [self.tableView reloadData];
+
         }
     }];
     
@@ -109,6 +118,26 @@
     [[FIRAuth auth] signOut:&error];
     
     [self checkUserStatus];
+    
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.allToDos.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    }
+    
+    ToDo *toDo = [self.allToDos objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", toDo.title];
+    
+    return cell;
     
 }
 

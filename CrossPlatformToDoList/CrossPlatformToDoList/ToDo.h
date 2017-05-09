@@ -10,4 +10,7 @@
 
 @interface ToDo : NSObject
 
+@property(strong, nonatomic)NSString *title;
+@property(strong,nonatomic)NSString *content;
+
 @end

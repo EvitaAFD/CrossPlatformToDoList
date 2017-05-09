@@ -40,6 +40,9 @@
     
     [[newToDoReference child:@"content"] setValue:self.contentTextField.text];
     
+    self.titleTextField.text = nil;
+    self.contentTextField.text = nil;
+    
 }
 
 

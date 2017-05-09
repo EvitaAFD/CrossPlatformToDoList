@@ -103,6 +103,7 @@
     if (self.toDoContainerView.hidden == YES) {
         [self.toDoContainerView setHidden:NO];
         self.addToDoTop.constant = kShowingTop;
+        
     } else {
         [self.toDoContainerView setHidden:YES];
         self.addToDoTop.constant = kDefaultDisplayTop;

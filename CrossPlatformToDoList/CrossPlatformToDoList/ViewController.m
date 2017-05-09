@@ -102,6 +102,15 @@
     }
     
 }
+- (IBAction)logoutButtonPressed:(id)sender {
+    
+    NSError *error;
+    
+    [[FIRAuth auth] signOut:&error];
+    
+    [self checkUserStatus];
+    
+}
 
 
 @end

@@ -53,6 +53,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TO DO LIST" id="z3v-83-RNv">
+                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="KtE-lB-quO">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" id="xHD-Yb-U3x"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZIU-db-fn1">
                             <connections>
                                 <action selector="addNewToDoPressed:" destination="BYZ-38-t0r" id="Lj0-AB-JiF"/>

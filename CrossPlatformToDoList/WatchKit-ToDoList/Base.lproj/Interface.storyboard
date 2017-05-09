@@ -25,9 +25,6 @@
                                             <label alignment="left" text="Conent" numberOfLines="0" id="LwU-dF-L1m"/>
                                         </items>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="XBb-GB-B4b" kind="push" id="6Je-UY-M1o"/>
-                                        </connections>
                                     </group>
                                     <connections>
                                         <outlet property="contentLabel" destination="LwU-dF-L1m" id="gSe-iQ-ACo"/>
@@ -53,27 +50,22 @@
             <objects>
                 <controller identifier="DetailToDoInterfaceController" title="To Do Details" id="XBb-GB-B4b" customClass="DetailToDoInterfaceController">
                     <items>
-                        <table alignment="left" id="gXe-ML-1XB">
+                        <group width="1" alignment="left" layout="vertical" id="tpd-jQ-Bh5">
                             <items>
-                                <tableRow identifier="DetailToDoInterfaceController" id="er8-u4-JPZ">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="htS-gs-EE8">
-                                        <items>
-                                            <label alignment="left" text="Title" id="G18-ze-mgL">
-                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                            </label>
-                                            <label alignment="left" text="Content" id="Xdn-zb-yXO"/>
-                                        </items>
-                                    </group>
-                                </tableRow>
+                                <label alignment="left" text="Title" id="tMe-JY-ulN">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <label alignment="left" text="Content" id="cV9-yE-5Qn"/>
                             </items>
-                        </table>
+                        </group>
                     </items>
                     <connections>
-                        <outlet property="watchDetailTable" destination="gXe-ML-1XB" id="LSE-Ca-Jqd"/>
+                        <outlet property="contentLabel" destination="cV9-yE-5Qn" id="xGg-MM-vPG"/>
+                        <outlet property="titleLabel" destination="tMe-JY-ulN" id="Nke-NS-LnB"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="353" y="21"/>
+            <point key="canvasLocation" x="312" y="37"/>
         </scene>
     </scenes>
 </document>

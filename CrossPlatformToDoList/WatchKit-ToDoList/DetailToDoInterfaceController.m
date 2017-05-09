@@ -11,8 +11,8 @@
 #import "InterfaceController.h"
 
 @interface DetailToDoInterfaceController ()
-
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *watchDetailTable;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *titleLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *contentLabel;
 
 @end
 

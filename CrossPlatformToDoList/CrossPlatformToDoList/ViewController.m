@@ -41,7 +41,6 @@
     [super viewDidAppear:animated];
     
     [self checkUserStatus];
-    [self.tableView reloadData];
 }
 
 -(void)checkUserStatus {
@@ -118,6 +117,7 @@
     [[FIRAuth auth] signOut:&error];
     
     [self checkUserStatus];
+    [self.tableView reloadData];
     
 }
 

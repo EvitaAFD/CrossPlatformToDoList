@@ -23,26 +23,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awc-6y-cgy">
-                                <rect key="frame" x="0.0" y="64" width="375" height="151"/>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awc-6y-cgy">
+                                <rect key="frame" x="0.0" y="-86" width="375" height="150"/>
                                 <color key="backgroundColor" red="0.58675108601412373" green="1" blue="0.52127553646657865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="vfk-6C-7XG"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="TLY-Qc-Kjn" kind="embed" id="eL1-Tf-T6c"/>
                                 </connections>
                             </containerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hBb-0l-MCa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="603" id="Ig5-76-bHG"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hBb-0l-MCa" firstAttribute="top" secondItem="awc-6y-cgy" secondAttribute="bottom" id="52x-e1-CHv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hBb-0l-MCa" secondAttribute="bottom" id="7df-2n-1ko"/>
                             <constraint firstItem="awc-6y-cgy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Amn-bL-sDK"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="awc-6y-cgy" secondAttribute="bottom" constant="452" id="Vxb-iL-3gW"/>
+                            <constraint firstItem="hBb-0l-MCa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MWQ-xX-YTI"/>
+                            <constraint firstAttribute="trailing" secondItem="hBb-0l-MCa" secondAttribute="trailing" id="aey-lM-jwh"/>
                             <constraint firstAttribute="trailing" secondItem="awc-6y-cgy" secondAttribute="trailing" id="fs4-cB-rio"/>
-                            <constraint firstItem="awc-6y-cgy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ixi-1W-1Ex"/>
-                            <constraint firstItem="awc-6y-cgy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vBK-VW-et8"/>
+                            <constraint firstItem="awc-6y-cgy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-150" id="ixi-1W-1Ex"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TO DO LIST" id="z3v-83-RNv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZIU-db-fn1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZIU-db-fn1">
+                            <connections>
+                                <action selector="addNewToDoPressed:" destination="BYZ-38-t0r" id="Lj0-AB-JiF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addToDoTop" destination="ixi-1W-1Ex" id="hOg-Ma-onl"/>
+                        <outlet property="toDoContainerView" destination="awc-6y-cgy" id="jWr-RC-s6d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,7 +174,7 @@
                         <viewControllerLayoutGuide type="bottom" id="L2M-I1-gKb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gXu-PN-c9Y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW TO DO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwD-Af-LEh">

@@ -18,6 +18,8 @@
 @property(strong, nonatomic) FIRUser *currentUser;
 
 @property (nonatomic) FIRDatabaseHandle allToDoHandler;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *addToDoTop;
+@property (weak, nonatomic) IBOutlet UIView *toDoContainerView;
 
 @end
 
@@ -85,6 +87,21 @@
     
 }
 
+- (IBAction)addNewToDoPressed:(id)sender {
+    
+    double kDefaultDisplayTop = (-150);
+    double kShowingTop = 0;
+    
+    if (self.toDoContainerView.hidden == YES) {
+        [self.toDoContainerView setHidden:NO];
+        self.addToDoTop.constant = kShowingTop;
+    } else {
+        [self.toDoContainerView setHidden:YES];
+        self.addToDoTop.constant = kDefaultDisplayTop;
+    
+    }
+    
+}
 
 
 @end

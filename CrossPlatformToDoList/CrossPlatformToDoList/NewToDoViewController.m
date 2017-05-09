@@ -12,8 +12,8 @@
 @import FirebaseAuth;
 
 @interface NewToDoViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *contentTextField;
 
 
@@ -41,6 +41,7 @@
     [[newToDoReference child:@"content"] setValue:self.contentTextField.text];
     
 }
+
 
 
 @end

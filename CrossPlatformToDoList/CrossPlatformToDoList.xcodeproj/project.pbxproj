@@ -10,6 +10,7 @@
 		5035D3401EC121AF00237DA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5035D33F1EC121AF00237DA5 /* GoogleService-Info.plist */; };
 		50B785CE1EC0EBBF00994FCA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B785CD1EC0EBBF00994FCA /* LoginViewController.m */; };
 		50B785D41EC10E5D00994FCA /* NewToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B785D31EC10E5D00994FCA /* NewToDoViewController.m */; };
+		50C9651D1EC14AE300DDB853 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C9651C1EC14AE300DDB853 /* ToDo.m */; };
 		50DEE1EA1EC0DF0F0083AA8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DEE1E91EC0DF0F0083AA8F /* main.m */; };
 		50DEE1ED1EC0DF0F0083AA8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DEE1EC1EC0DF0F0083AA8F /* AppDelegate.m */; };
 		50DEE1F01EC0DF0F0083AA8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DEE1EF1EC0DF0F0083AA8F /* ViewController.m */; };
@@ -27,6 +28,8 @@
 		50B785CD1EC0EBBF00994FCA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		50B785D21EC10E5D00994FCA /* NewToDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewToDoViewController.h; sourceTree = "<group>"; };
 		50B785D31EC10E5D00994FCA /* NewToDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewToDoViewController.m; sourceTree = "<group>"; };
+		50C9651B1EC14AE300DDB853 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
+		50C9651C1EC14AE300DDB853 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
 		50DEE1E51EC0DF0F0083AA8F /* CrossPlatformToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossPlatformToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50DEE1E91EC0DF0F0083AA8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50DEE1EB1EC0DF0F0083AA8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 		50B785D01EC0F74700994FCA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				50C9651B1EC14AE300DDB853 /* ToDo.h */,
+				50C9651C1EC14AE300DDB853 /* ToDo.m */,
 				50DEE1EB1EC0DF0F0083AA8F /* AppDelegate.h */,
 				50DEE1EC1EC0DF0F0083AA8F /* AppDelegate.m */,
 			);
@@ -269,6 +274,7 @@
 				50DEE1F01EC0DF0F0083AA8F /* ViewController.m in Sources */,
 				50DEE1ED1EC0DF0F0083AA8F /* AppDelegate.m in Sources */,
 				50DEE1EA1EC0DF0F0083AA8F /* main.m in Sources */,
+				50C9651D1EC14AE300DDB853 /* ToDo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

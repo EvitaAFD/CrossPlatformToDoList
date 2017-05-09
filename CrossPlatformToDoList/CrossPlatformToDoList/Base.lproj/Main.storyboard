@@ -85,7 +85,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginPressed:" destination="BPP-X7-lx1" eventType="touchUpInside" id="29p-WQ-7Dz"/>
+                                    <action selector="loginPressed:" destination="BPP-X7-lx1" eventType="touchUpInside" id="O17-d8-gTJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5a-hd-F45">
@@ -95,7 +95,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="signupPressed:" destination="BPP-X7-lx1" eventType="touchUpInside" id="Mt6-KK-42G"/>
+                                    <action selector="signupPressed:" destination="BPP-X7-lx1" eventType="touchUpInside" id="2qP-5j-fBp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -118,6 +118,10 @@
                             <constraint firstItem="H5a-hd-F45" firstAttribute="trailing" secondItem="eab-2h-kS0" secondAttribute="trailing" id="rtw-s3-1cF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="kdf-YA-rO0" id="l3c-pP-ZJG"/>
+                        <outlet property="passwordTextField" destination="eab-2h-kS0" id="1zC-QB-Ole"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b28-LS-x2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

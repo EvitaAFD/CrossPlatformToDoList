@@ -12,8 +12,9 @@
 
 @interface LoginViewController ()
 
-@property(strong, nonatomic) UITextField *emailTextField;
-@property(strong, nonatomic) UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
 
 @end
 
@@ -51,7 +52,12 @@
 
 - (IBAction)signupPressed:(id)sender {
     
-    [[FIRAuth auth] createUserWithEmail:self.emailTextField.text password:self.passwordTextField.text completion:^(FIRUser * _Nullable user, NSError * _Nullable error){
+    NSString *password = self.passwordTextField.text;
+    NSString *email = self.emailTextField.text;
+    
+    NSLog(@"Password: %@  Email: %@", password, email);
+    
+    [[FIRAuth auth] createUserWithEmail:email password:password completion:^(FIRUser * _Nullable user, NSError * _Nullable error){
         
         if (error) {
             NSLog(@"Error Signing Up: %@", error.localizedDescription);

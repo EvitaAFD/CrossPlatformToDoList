@@ -140,6 +140,9 @@
     
     cell.textLabel.text = [NSString stringWithFormat:@"To Do Name: %@, To Do Details: %@", toDo.title, toDo.content];
     
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.textLabel.numberOfLines = 0;
+    
     return cell;
     
 }

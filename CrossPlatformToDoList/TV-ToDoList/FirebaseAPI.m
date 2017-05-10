@@ -45,7 +45,10 @@
         }
         
         if (completion) {
-            completion(allToDos);
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                completion(allToDos);
+                
+            });
         }
         
     }] resume];

@@ -11,11 +11,13 @@
 @implementation ToDo
 
 - (instancetype)initWithTitle:(NSString *)title withContent:(NSString *)content withKey:(NSString *)key andCompleted:(NSNumber *)completed{
+    
+    self = [super init];
  
-    self.title = title;
-    self.content = content;
-    self.key = key;
-    self.completed = @0;
+    _title = title;
+    _content = content;
+    _key = key;
+    _completed = @0;
     
     
     return self;

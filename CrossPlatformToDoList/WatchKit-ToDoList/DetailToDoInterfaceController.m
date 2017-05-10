@@ -21,7 +21,8 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
-    // Configure interface objects here.
+    [self.titleLabel setText:context[@"title"]];
+    [self.contentLabel setText:context[@"content"]];
 }
 
 - (void)willActivate {

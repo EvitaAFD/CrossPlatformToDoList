@@ -73,8 +73,9 @@
 }
 
 -(void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex {
+    NSDictionary *toDoDictionary = @{@"title":self.allToDos[rowIndex].title, @"content":self.allToDos[rowIndex].content};
     
-    
+    [self pushControllerWithName:@"DetailToDoInterfaceController" context:toDoDictionary];
 }
 
 - (IBAction)newToDoPressed {

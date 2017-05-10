@@ -143,7 +143,7 @@
     
     ToDo *toDo = [self.allToDos objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"To Do Name: %@, To Do Details: %@", toDo.title, toDo.content];
+    cell.textLabel.text = [NSString stringWithFormat:@"TO DO NAME: %@, TO DO DETAILS: %@", toDo.title, toDo.content];
     
     cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cell.textLabel.numberOfLines = 0;
@@ -161,9 +161,11 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         self.userReference = [[FIRDatabase database] reference];
         
-        ToDo *currentToDo = _allToDos[indexPath.row];
+        ToDo *currentToDo = self.allToDos[indexPath.row];
         
         [[[[[[_userReference child:@"users"] child:_currentUser.uid] child:@"todos"] child:currentToDo.key] child:@"completed"] setValue:@1];
+        
+        [self.allToDos removeObjectAtIndex:indexPath.row];
     }
     [self.tableView reloadData];
 

@@ -8,6 +8,7 @@
 
 #import "TVHomeViewController.h"
 #import "ToDo.h"
+#import "FirebaseAPI.h"
 
 @interface TVHomeViewController () <UITableViewDataSource>
 
@@ -22,24 +23,28 @@
     [super viewDidLoad];
     
     self.tvTableView.dataSource = self;
+    
+    [FirebaseAPI fetchAllTodos:^(NSArray<ToDo *> *allTodos) {
+        NSLog(@"%@", allTodos);
+    }];
 }
 
--(NSArray<ToDo *> *)allToDos {
-    ToDo *firstToDo = [[ToDo alloc]init];
-    firstToDo.title = @"First To Do";
-    firstToDo.content = @"To do stuff";
-    
-    ToDo *secondToDo = [[ToDo alloc]init];
-    secondToDo.title = @"Second To Do";
-    secondToDo.content = @"To do more stuff";
-    
-    ToDo *thirdToDo = [[ToDo alloc]init];
-    thirdToDo.title = @"ThirdTo Do";
-    thirdToDo.content = @"Oh no another to do";
-    
-    return @[firstToDo, secondToDo, thirdToDo];
-    
-}
+//-(NSArray<ToDo *> *)allToDos {
+//    ToDo *firstToDo = [[ToDo alloc]init];
+//    firstToDo.title = @"First To Do";
+//    firstToDo.content = @"To do stuff";
+//    
+//    ToDo *secondToDo = [[ToDo alloc]init];
+//    secondToDo.title = @"Second To Do";
+//    secondToDo.content = @"To do more stuff";
+//    
+//    ToDo *thirdToDo = [[ToDo alloc]init];
+//    thirdToDo.title = @"ThirdTo Do";
+//    thirdToDo.content = @"Oh no another to do";
+//    
+//    return @[firstToDo, secondToDo, thirdToDo];
+//    
+//}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];

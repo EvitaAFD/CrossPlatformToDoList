@@ -15,7 +15,7 @@
     self.title = title;
     self.content = content;
     self.key = key;
-    self.completed = completed;
+    self.completed = @0;
     
     
     return self;

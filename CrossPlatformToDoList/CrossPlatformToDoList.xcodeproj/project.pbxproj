@@ -22,11 +22,12 @@
 		506102071EC246C400DB3F48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506102051EC246C400DB3F48 /* Main.storyboard */; };
 		506102091EC246C400DB3F48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506102081EC246C400DB3F48 /* Assets.xcassets */; };
 		506102101EC248B500DB3F48 /* TVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5061020F1EC248B500DB3F48 /* TVHomeViewController.m */; };
-		506102111EC249D500DB3F48 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C9651C1EC14AE300DDB853 /* ToDo.m */; };
 		5061021A1EC2768900DB3F48 /* DetailToDoInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506102191EC2768900DB3F48 /* DetailToDoInterfaceController.m */; };
 		5061021B1EC2768900DB3F48 /* DetailToDoInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506102191EC2768900DB3F48 /* DetailToDoInterfaceController.m */; };
 		5061021E1EC2A0A200DB3F48 /* CompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5061021D1EC2A0A200DB3F48 /* CompletedViewController.m */; };
 		506102211EC2A48800DB3F48 /* CompletedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 506102201EC2A48800DB3F48 /* CompletedTableViewCell.m */; };
+		506102261EC384F100DB3F48 /* FirebaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 506102251EC384F100DB3F48 /* FirebaseAPI.m */; };
+		506102281EC38CB000DB3F48 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C9651C1EC14AE300DDB853 /* ToDo.m */; };
 		50B785CE1EC0EBBF00994FCA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B785CD1EC0EBBF00994FCA /* LoginViewController.m */; };
 		50B785D41EC10E5D00994FCA /* NewToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B785D31EC10E5D00994FCA /* NewToDoViewController.m */; };
 		50C9651D1EC14AE300DDB853 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C9651C1EC14AE300DDB853 /* ToDo.m */; };
@@ -113,6 +114,9 @@
 		5061021D1EC2A0A200DB3F48 /* CompletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedViewController.m; sourceTree = "<group>"; };
 		5061021F1EC2A48800DB3F48 /* CompletedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedTableViewCell.h; sourceTree = "<group>"; };
 		506102201EC2A48800DB3F48 /* CompletedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedTableViewCell.m; sourceTree = "<group>"; };
+		506102241EC384F100DB3F48 /* FirebaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseAPI.h; sourceTree = "<group>"; };
+		506102251EC384F100DB3F48 /* FirebaseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseAPI.m; sourceTree = "<group>"; };
+		506102271EC3873A00DB3F48 /* Credentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credentials.h; sourceTree = "<group>"; };
 		50B785CC1EC0EBBF00994FCA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		50B785CD1EC0EBBF00994FCA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		50B785D21EC10E5D00994FCA /* NewToDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewToDoViewController.h; sourceTree = "<group>"; };
@@ -188,6 +192,9 @@
 		506101FB1EC246C400DB3F48 /* TV-ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				506102271EC3873A00DB3F48 /* Credentials.h */,
+				506102241EC384F100DB3F48 /* FirebaseAPI.h */,
+				506102251EC384F100DB3F48 /* FirebaseAPI.m */,
 				5061020E1EC248B500DB3F48 /* TVHomeViewController.h */,
 				5061020F1EC248B500DB3F48 /* TVHomeViewController.m */,
 				506101FF1EC246C400DB3F48 /* AppDelegate.h */,
@@ -541,10 +548,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				506102281EC38CB000DB3F48 /* ToDo.m in Sources */,
 				506102011EC246C400DB3F48 /* AppDelegate.m in Sources */,
+				506102261EC384F100DB3F48 /* FirebaseAPI.m in Sources */,
 				506101FE1EC246C400DB3F48 /* main.m in Sources */,
 				506102101EC248B500DB3F48 /* TVHomeViewController.m in Sources */,
-				506102111EC249D500DB3F48 /* ToDo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

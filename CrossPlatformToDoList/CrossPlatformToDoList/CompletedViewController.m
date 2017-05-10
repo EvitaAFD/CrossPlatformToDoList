@@ -62,7 +62,7 @@
             
             NSDictionary *todoData = child.value;
             
-            if (toDo.completed.integerValue == 0) {
+            if (toDo.completed.integerValue == 1) {
                 
                 toDo.title = todoData[@"title"];
                 toDo.content = todoData[@"content"];
@@ -92,7 +92,7 @@
     
     ToDo *toDo = [self.allToDos objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"To Do Name: %@, To Do Details: %@", toDo.title, toDo.content];
+    cell.textLabel.text = [NSString stringWithFormat:@"TO DO NAME: %@, TO DO DETAILS: %@", toDo.title, toDo.content];
     
     cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cell.textLabel.numberOfLines = 0;

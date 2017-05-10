@@ -19,7 +19,6 @@
 
 @property(strong, nonatomic) FIRDatabaseReference *userReference;
 @property(strong, nonatomic) FIRUser *currentUser;
-
 @property (nonatomic) FIRDatabaseHandle allToDoHandler;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *addToDoTop;
 @property (weak, nonatomic) IBOutlet UIView *toDoContainerView;
@@ -84,10 +83,16 @@
         
             NSDictionary *todoData = child.value;
             
+            if (toDo.completed.integerValue == 0) {
+                
             toDo.title = todoData[@"title"];
             toDo.content = todoData[@"content"];
+            toDo.key = todoData[@"key"];
+            toDo.completed = todoData[@"completed"];
             
             [self.allToDos addObject:toDo];
+                
+            }
             [self.tableView reloadData];
 
         }
@@ -145,6 +150,23 @@
     
     return cell;
     
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        self.userReference = [[FIRDatabase database] reference];
+        
+        ToDo *currentToDo = _allToDos[indexPath.row];
+        
+        [[[[[[_userReference child:@"users"] child:_currentUser.uid] child:@"todos"] child:currentToDo.key] child:@"completed"] setValue:@1];
+    }
+    [self.tableView reloadData];
+
 }
 
 

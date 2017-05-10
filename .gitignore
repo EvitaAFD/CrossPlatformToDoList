@@ -151,6 +151,8 @@ playground.xcworkspace
 
 ## Other
 
+/Credentials.h
+
 ### Xcode Patch ###
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj

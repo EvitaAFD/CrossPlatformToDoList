@@ -10,10 +10,13 @@
 
 @implementation ToDo
 
-- (instancetype)initWithTitle:(NSString *)title withContent:(NSString *)content {
+- (instancetype)initWithTitle:(NSString *)title withContent:(NSString *)content withKey:(NSString *)key andCompleted:(NSNumber *)completed{
  
     self.title = title;
     self.content = content;
+    self.key = key;
+    self.completed = completed;
+    
     
     return self;
 }

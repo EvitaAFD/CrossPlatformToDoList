@@ -44,6 +44,9 @@
     
     [[newToDoReference child:@"key"] setValue:newToDoReference.key];
     
+//  ADD THIS IN AFTER ADDING STORYBOARD  
+//    [[newToDoReference child:@"email"] setValue:self.emailTextField.text];
+    
     self.titleTextField.text = nil;
     self.contentTextField.text = nil;
     

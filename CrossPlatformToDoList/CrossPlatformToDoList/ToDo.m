@@ -10,7 +10,7 @@
 
 @implementation ToDo
 
-- (instancetype)initWithTitle:(NSString *)title withContent:(NSString *)content withKey:(NSString *)key andCompleted:(NSNumber *)completed{
+- (instancetype)initWithTitle:(NSString *)title withContent:(NSString *)content withKey:(NSString *)key completed:(NSNumber *)completed andEmail:(NSString *)email{
     
     self = [super init];
  
@@ -19,6 +19,7 @@
         _content = content;
         _key = key;
         _completed = @0;
+        _email = email;
         
     }
     
@@ -33,6 +34,7 @@
         _content = jsonDictionary[@"content"];
         _key = jsonDictionary[@"key"];
         _completed = jsonDictionary[@"completed"];
+        _email = jsonDictionary[@"email"];
         
     }
     return self;

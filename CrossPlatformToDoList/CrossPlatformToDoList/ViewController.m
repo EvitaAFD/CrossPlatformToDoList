@@ -159,9 +159,8 @@
         ToDo *currentToDo = self.allToDos[indexPath.row];
         
         [[[[[[_userReference child:@"users"] child:_currentUser.uid] child:@"todos"] child:currentToDo.key] child:@"completed"] setValue:@1];
-        
-//        [self.allToDos removeObjectAtIndex:indexPath.row];
     }
+    
     [self.tableView reloadData];
 
 }

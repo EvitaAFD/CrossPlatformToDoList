@@ -78,17 +78,12 @@
         self.allToDos = [[NSMutableArray alloc] init];
         
         for (FIRDataSnapshot *child in snapshot.children) {
-            
-            ToDo *toDo = [[ToDo alloc] init];
         
             NSDictionary *todoData = child.value;
             
-            if (toDo.completed.integerValue == 0) {
+            if ([todoData[@"completed"] isEqual:@0]) {
                 
-            toDo.title = todoData[@"title"];
-            toDo.content = todoData[@"content"];
-            toDo.key = todoData[@"key"];
-            toDo.completed = todoData[@"completed"];
+            ToDo *toDo = [[ToDo alloc]initWithDictionary:todoData];
             
             [self.allToDos addObject:toDo];
                 
@@ -165,7 +160,7 @@
         
         [[[[[[_userReference child:@"users"] child:_currentUser.uid] child:@"todos"] child:currentToDo.key] child:@"completed"] setValue:@1];
         
-        [self.allToDos removeObjectAtIndex:indexPath.row];
+//        [self.allToDos removeObjectAtIndex:indexPath.row];
     }
     [self.tableView reloadData];
 

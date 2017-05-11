@@ -58,16 +58,11 @@
         
         for (FIRDataSnapshot *child in snapshot.children) {
             
-            ToDo *toDo = [[ToDo alloc] init];
-            
             NSDictionary *todoData = child.value;
             
-            if (toDo.completed.integerValue == 1) {
+            if ([todoData[@"completed"] isEqual:@1]) {
                 
-                toDo.title = todoData[@"title"];
-                toDo.content = todoData[@"content"];
-                toDo.key = todoData[@"key"];
-                toDo.completed = todoData[@"completed"];
+                ToDo *toDo = [[ToDo alloc]initWithDictionary:todoData];
                 
                 [self.allToDos addObject:toDo];
                 

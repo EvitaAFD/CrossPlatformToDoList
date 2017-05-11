@@ -14,12 +14,27 @@
     
     self = [super init];
  
-    _title = title;
-    _content = content;
-    _key = key;
-    _completed = @0;
+    if (self) {
+        _title = title;
+        _content = content;
+        _key = key;
+        _completed = @0;
+        
+    }
     
+    return self;
+}
+
+-(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary {
+    self = [super init];
     
+    if (self) {
+        _title = jsonDictionary[@"title"];
+        _content = jsonDictionary[@"content"];
+        _key = jsonDictionary[@"key"];
+        _completed = jsonDictionary[@"completed"];
+        
+    }
     return self;
 }
 

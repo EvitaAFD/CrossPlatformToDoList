@@ -7,6 +7,8 @@
 //
 
 #import "TVDetailViewController.h"
+#import "ToDo.h"
+#import "TVHomeViewController.h"
 
 @interface TVDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -18,7 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.titleLabel setText:self.selectedToDo.title];
+    [self.contentLabel setText:self.selectedToDo.content];
 }
 
 

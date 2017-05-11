@@ -11,13 +11,30 @@
 @implementation ToDo
 
 - (instancetype)initWithTitle:(NSString *)title withContent:(NSString *)content withKey:(NSString *)key andCompleted:(NSNumber *)completed{
+    
+    self = [super init];
  
-    self.title = title;
-    self.content = content;
-    self.key = key;
-    self.completed = completed;
+    if (self) {
+        _title = title;
+        _content = content;
+        _key = key;
+        _completed = @0;
+        
+    }
     
+    return self;
+}
+
+-(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary {
+    self = [super init];
     
+    if (self) {
+        _title = jsonDictionary[@"title"];
+        _content = jsonDictionary[@"content"];
+        _key = jsonDictionary[@"key"];
+        _completed = jsonDictionary[@"completed"];
+        
+    }
     return self;
 }
 

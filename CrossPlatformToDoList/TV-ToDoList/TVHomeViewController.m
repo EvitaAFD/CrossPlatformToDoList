@@ -7,9 +7,11 @@
 //
 
 #import "TVHomeViewController.h"
+#import "TVDetailViewController.h"
 #import "ToDo.h"
+#import "FirebaseAPI.h"
 
-@interface TVHomeViewController () <UITableViewDataSource>
+@interface TVHomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tvTableView;
 @property(strong, nonatomic) NSArray<ToDo *> *allToDos;
@@ -22,37 +24,36 @@
     [super viewDidLoad];
     
     self.tvTableView.dataSource = self;
-}
-
--(NSArray<ToDo *> *)allToDos {
-    ToDo *firstToDo = [[ToDo alloc]init];
-    firstToDo.title = @"First To Do";
-    firstToDo.content = @"To do stuff";
+    self.tvTableView.delegate = self;
     
-    ToDo *secondToDo = [[ToDo alloc]init];
-    secondToDo.title = @"Second To Do";
-    secondToDo.content = @"To do more stuff";
-    
-    ToDo *thirdToDo = [[ToDo alloc]init];
-    thirdToDo.title = @"ThirdTo Do";
-    thirdToDo.content = @"Oh no another to do";
-    
-    return @[firstToDo, secondToDo, thirdToDo];
-    
+    [FirebaseAPI fetchAllTodos:^(NSArray<ToDo *> *allTodos) {
+        NSLog(@"%@", allTodos);
+        
+        self.allToDos = allTodos;
+        [self.tvTableView reloadData];
+    }];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     cell.textLabel.text = self.allToDos[indexPath.row].title;
-    cell.textLabel.text = self.allToDos[indexPath.row].content;
+    cell.detailTextLabel.text = self.allToDos[indexPath.row].content;
     
     return cell;
     
 }
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.allToDos.count;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TVDetailViewController *detailController = [self.storyboard instantiateViewControllerWithIdentifier:@"TVDetailViewController"];
+    detailController.selectedToDo = self.allToDos[indexPath.row];
+    
+    [self presentViewController:detailController animated:YES completion:nil];
+
 }
 
 @end

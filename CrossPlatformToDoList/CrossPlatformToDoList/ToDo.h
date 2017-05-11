@@ -15,4 +15,10 @@
 @property(strong,nonatomic)NSString *key;
 @property(strong,nonatomic)NSNumber *completed;
 
+-(instancetype)initWithTitle:(NSString *)title withContent:(NSString *)content withKey:(NSString *)key andCompleted:(NSNumber *)completed;
+
+-(instancetype)initWithDictionary:(NSDictionary *)jsonDictionary;
+
+
+
 @end

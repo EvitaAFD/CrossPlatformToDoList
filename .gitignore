@@ -151,6 +151,8 @@ playground.xcworkspace
 
 ## Other
 
+*/TV-ToDoList/Credentials.h
+
 ### Xcode Patch ###
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj

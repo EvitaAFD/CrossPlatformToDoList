@@ -58,16 +58,11 @@
         
         for (FIRDataSnapshot *child in snapshot.children) {
             
-            ToDo *toDo = [[ToDo alloc] init];
-            
             NSDictionary *todoData = child.value;
             
-            if (toDo.completed.integerValue == 0) {
+            if ([todoData[@"completed"] isEqual:@1]) {
                 
-                toDo.title = todoData[@"title"];
-                toDo.content = todoData[@"content"];
-                toDo.key = todoData[@"key"];
-                toDo.completed = todoData[@"completed"];
+                ToDo *toDo = [[ToDo alloc]initWithDictionary:todoData];
                 
                 [self.allToDos addObject:toDo];
                 
@@ -92,7 +87,7 @@
     
     ToDo *toDo = [self.allToDos objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"To Do Name: %@, To Do Details: %@", toDo.title, toDo.content];
+    cell.textLabel.text = [NSString stringWithFormat:@"TO DO NAME: %@, TO DO DETAILS: %@", toDo.title, toDo.content];
     
     cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cell.textLabel.numberOfLines = 0;

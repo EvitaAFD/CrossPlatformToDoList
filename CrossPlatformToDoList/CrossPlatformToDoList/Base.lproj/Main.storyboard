@@ -151,11 +151,11 @@
             </objects>
             <point key="canvasLocation" x="-378" y="733"/>
         </scene>
-        <!--Item-->
+        <!--To Do-->
         <scene sceneID="llc-zP-cjf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oMR-NA-eE8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="UgE-Gy-gyF"/>
+                    <tabBarItem key="tabBarItem" title="To Do" id="UgE-Gy-gyF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cP9-fx-RMT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -235,7 +235,7 @@
             </objects>
             <point key="canvasLocation" x="2876" y="58.47076461769116"/>
         </scene>
-        <!--Item-->
+        <!--Completed-->
         <scene sceneID="I4s-YC-pFd">
             <objects>
                 <viewController id="Lu8-6h-INI" customClass="CompletedViewController" sceneMemberID="viewController">
@@ -290,7 +290,7 @@
                             <constraint firstItem="Kl0-gm-Xms" firstAttribute="top" secondItem="Yua-PM-w8i" secondAttribute="bottom" id="zWm-tu-hFb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="nW3-FX-rjw"/>
+                    <tabBarItem key="tabBarItem" title="Completed" id="nW3-FX-rjw"/>
                     <connections>
                         <outlet property="tableView" destination="Yua-PM-w8i" id="qco-DQ-pe6"/>
                     </connections>
